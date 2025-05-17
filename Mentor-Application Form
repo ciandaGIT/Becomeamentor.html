@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-section select,
+        .form-section input[type="text"],
+        .form-section textarea {
+            width: 100%;
+        }
+
+        .form-section input[type="checkbox"] {
+            width: auto;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-group label {
+            width: 50%;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Application to a be Mentor</h1>
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DO500000UwCCP" method="POST">
+    <input type="hidden" name="oid" value="00DO500000UwCCP">
+    <input type="hidden" name="retURL" value="http://mojatu--partial--c.sandbox.vf.force.com/apex/Thank_you">
+
+    <div class="form-section">
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" type="text" />
+    </div>
+
+    <div class="form-section">
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" type="text" />
+    </div>
+
+    <div class="form-section">
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" type="text" />
+    </div>
+
+    <div class="form-section">
+        <label for="city">City</label>
+        <input id="city" maxlength="40" name="city" type="text" />
+    </div>
+
+    <div class="form-section">
+        <label for="state">State/Province</label>
+        <input id="state" maxlength="20" name="state" type="text" />
+    </div>
+
+    <div class="form-section">
+        <label for="career_experience">Career experience and areas of expertise:</label>
+        <textarea id="00NO500000DaG1y" name="00NO500000DaG1y" rows="5"></textarea>
+    </div>
+
+    <div class="form-section">
+        <label for="mentorship_interest">Mentorship Interest:</label>
+        <textarea id="00NO500000Dabft" name="00NO500000Dabft" rows="3"></textarea>
+    </div>
+
+    <div class="form-section">
+        <label for="long_term_vs_short_term">Long-Term vs Short-Term:</label>
+        <select id="00NO500000DabwD" name="00NO500000DabwD">
+            <option value="">--None--</option>
+            <option value="Short-Term">Short-Term</option>
+            <option value="Long-Term">Long-Term</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <label for="mentorship_experience">Mentorship Experience:</label>
+        <select id="00NO500000DaKDe" name="00NO500000DaKDe">
+            <option value="">--None--</option>
+            <option value="None">None</option>
+            <option value="Professional">Professional</option>
+            <option value="University">University</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <label for="uncomfortable_areas">Uncomfortable Areas:</label>
+        <textarea id="00NO500000DaUQI" name="00NO500000DaUQI" rows="8"></textarea>
+    </div>
+
+    <div class="form-section">
+        <label for="time_commitment">Time Commitment:</label>
+        <input id="00NO500000Daj2L" maxlength="22" name="00NO500000Daj2L" type="text" />
+    </div>
+
+    <div class="form-section">
+        <label for="emotional_support_agreement">Emotional Support Agreement:</label>
+        <input id="00NO500000Dac7f" name="00NO500000Dac7f" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="availability_days_of_week">Availability (Days of the Week):</label>
+        <select id="00NO500000Dal5v" multiple="multiple" name="00NO500000Dal5v">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <label for="comfortable_with_virtual_mentoring">Comfortable with Virtual Mentoring:</label>
+        <select id="00NO500000Dacia" name="00NO500000Dacia">
+            <option value="">--None--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <label for="setting_goals_short_long_term">Setting goals both short and long term:</label>
+        <input id="00NO500000EIT0I" name="00NO500000EIT0I" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="management_of_time_skill">Management of time (Skill):</label>
+        <input id="00NO500000EImm5" name="00NO500000EImm5" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="employment_preparation_skill">Employment preparation (Skill):</label>
+        <input id="00NO500000EIn0b" name="00NO500000EIn0b" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="university_life_adaptation">University life and adaptation to a new environment:</label>
+        <input id="00NO500000EInS1" name="00NO500000EInS1" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="work_school_life_balance">Work/school life balance:</label>
+        <input id="00NO500000EIni9" name="00NO500000EIni9" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="exposure_to_technological_developments">Exposure to technological developments:</label>
+        <input id="00NO500000EInlN" name="00NO500000EInlN" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="general_and_emotional_assistance">General and emotional assistance:</label>
+        <input id="00NO500000EISXI" name="00NO500000EISXI" type="checkbox" value="1" />
+    </div>
+
+    <div class="form-section">
+        <label for="other">Other:</label>
+        <input id="00NO500000EIor7" name="00NO500000EIor7" type="checkbox" value="1" />
+    </div>
+
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>
